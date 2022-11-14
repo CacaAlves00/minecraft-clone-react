@@ -1,3 +1,5 @@
+A Minecraft clone implemented with React and Three.js
+
 ![Captura de tela de 2022-11-14 14-33-41](https://user-images.githubusercontent.com/96545053/201728146-a451fcab-304e-4bed-96f3-e0a14ca14a5e.png)
 
 ![Captura de tela de 2022-11-14 14-36-32](https://user-images.githubusercontent.com/96545053/201728154-813cfad7-39e8-480c-8667-76c9b57faedc.png)
