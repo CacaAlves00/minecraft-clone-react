@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Physics } from '@react-three/cannon'
+import { Sky } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import './App.css'
+import Cubes from './components/Cubes'
+import FPV from './components/FPV'
+import Ground from './components/Ground'
+import Player from './components/Player'
+import Menu from './components/Menu'
+import TextureSelector from './components/TextureSelector'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* <div>Outside canvas</div> */}
+
+      <Canvas>
+        <Sky sunPosition={[100, 100, 20]} />
+
+        <ambientLight intensity={0.5} />
+
+        <FPV />      
+
+        <Physics>
+          <Player />
+          <Ground />
+          <Cubes />
+        </Physics>
+      </Canvas>
+
+      <div className='absolute centered cursor'>+</div>
+      <TextureSelector />
+      
+      <Menu />
+    </>
+  )
 }
 
-export default App;
+export default App
